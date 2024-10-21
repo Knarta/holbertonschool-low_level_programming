@@ -1,15 +1,12 @@
 #include <stdio.h>
-
-int main (void)
-{
-
-/* 
- * main : Program entry point
+/**
+ * main - Program entry point
  *
- * return : finish execution and return value or variable
- *
+ * Return: 0
  */
-	puts("Programming is like building a multilingual puzzle");
 
-	return (0); 
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
