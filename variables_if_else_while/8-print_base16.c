@@ -11,7 +11,7 @@ int main(void)
 	char ch;
 	int digit;
 
-	for ( digit = '0'; digit <= '9';)
+	for (digit = '0'; digit <= '9';)
 	{
 		putchar(digit++);
 	}
