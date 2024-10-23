@@ -1,4 +1,4 @@
-int _putchar(void)
+int _my_putchar(void)
 {
 	putchar('_');
         putchar('p');
