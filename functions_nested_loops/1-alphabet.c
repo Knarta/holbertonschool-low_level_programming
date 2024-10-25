@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Program entry point
+ * print_alphabet - Print alphabet
  *
  * Return: 0
  *
@@ -11,7 +11,7 @@ void print_alphabet(void)
 {
 	int ch;
 
-	for ( ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		_putchar(ch);
 	}
