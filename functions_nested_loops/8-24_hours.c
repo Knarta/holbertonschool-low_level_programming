@@ -3,10 +3,6 @@
 /**
  * jack_bauer - print hours and minutes
  *
- * @hours: calculate hours
- *
- * @minutes: calculate minutes
- *
  * Return: void
  */
 
