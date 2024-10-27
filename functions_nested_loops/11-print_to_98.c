@@ -22,7 +22,7 @@ void print_to_98(int n)
 
 	else
 	{
-		for (cpt = n; cpt >= 97; cpt--)
+		for (cpt = n; cpt >= 99; cpt--)
 		{
 			printf("%d, ", cpt);
 		}
