@@ -12,11 +12,16 @@ void more_numbers(void)
 
 	for (digit = 0; digit < 10; digit++)
 	{
+
 		for (i = 0; i <= 14; i++)
+
 		{
-			printf("%d", i);
+			if (i > 9)
+
+			_putchar('0' + (i / 10));
+			_putchar('0' + (i % 10));
 		}
-	printf("\n");
+		_putchar('\n');
 
 	}
 }
