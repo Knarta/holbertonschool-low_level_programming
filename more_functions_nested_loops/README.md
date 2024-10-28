@@ -1,1 +1,1 @@
-C functions and pointers
+Readme C fucntions
