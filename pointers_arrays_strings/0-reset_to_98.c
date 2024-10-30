@@ -4,7 +4,7 @@
 /**
  * reset_to_98 -  updates the value of the pointer
  *
- * @*n: pointer
+ * @n: pointer
  *
  * Return: void
  */
