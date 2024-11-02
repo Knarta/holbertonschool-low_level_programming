@@ -14,27 +14,19 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int sign = 1;
-	int j;
-	int k;
-	int conv;
-	int res = 0;
-	int p = 0;
-	int l;
+	int j, k, l, conv;
+	int res = 0, p = 0;
 	int base10 = 1;
 
 	while (!(s[i] >= '0' && s[i] <= '9') && s[i] != '\0')
 	{
 		if (s[i] == '-')
-		{
 			sign = -sign;
-		}
 		i++;
 	}
 	j = i;
 	while (s[i] >= '0' && s[i] <= '9')
-	{
 		i++;
-	}
 	for (k = i - 1; k >= j; k--)
 	{
 		conv = s[k] - '0';
@@ -42,9 +34,7 @@ int _atoi(char *s)
 		base10 = 1;
 
 		for (l = 0; l < p; l++)
-		{
 			base10 = base10 * 10;
-		}
 
 		if (base10 > INT_MAX / 10)
 		{
