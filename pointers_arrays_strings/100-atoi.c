@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * _atoi - convert a sgtring to int
@@ -45,8 +46,20 @@ int _atoi(char *s)
 			base10 = base10 * 10;
 		}
 
-		res = res + conv * base10;
-		p++;
+		if (base10 > INT_MAX / 10)
+		{
+			if (sign == 1)
+				return (INT_MAX);
+			else
+				return (INT_MIN);
+		}
+
+		else
+		{
+			res = res + conv * base10;
+			p++;
+			printf("res = %d\n", res);
+		}
 	}
 	res = res * sign;
 	return (res);
