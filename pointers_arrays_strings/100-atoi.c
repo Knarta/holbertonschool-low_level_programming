@@ -58,7 +58,6 @@ int _atoi(char *s)
 		{
 			res = res + conv * base10;
 			p++;
-			printf("res = %d\n", res);
 		}
 	}
 	res = res * sign;
