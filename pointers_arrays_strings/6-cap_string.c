@@ -33,6 +33,9 @@ char *cap_string(char *str)
 				str[i + 1] = str[i + 1] - ('a' - 'A');
 			}
 		}
+		if (str[0] >= 'a' && str[0] <= 'z')
+			str[0] = str[0] - ('a' - 'A');
+
 		i++;
 	}
 	return (str);
