@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strstr - locates a substring
@@ -14,6 +15,9 @@ char *_strstr(char *haystack, char *needle)
 {
 	char *tmp;
 	char *n;
+
+	if (haystack == NULL || needle == NULL)
+		return (NULL);
 
 	if (*needle == '\0')
 		return (haystack);
@@ -31,12 +35,10 @@ char *_strstr(char *haystack, char *needle)
 				tmp++;
 			}
 			if (*n == '\0')
-                        {
-                                return (haystack);
-                        }
-			printf("coucou\n");
+			{
+				return (haystack);
+			}
 		}
-		printf("%c\n", *haystack);
 		haystack++;
 	}
 	return (NULL);
