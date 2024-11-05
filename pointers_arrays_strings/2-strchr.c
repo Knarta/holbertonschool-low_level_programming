@@ -17,14 +17,18 @@ char *_strchr(char *s, char c)
 	if (s == NULL)
 		return (NULL);
 
-	while (*res != c && *res != '\0')
+	while (*res != '\0')
 	{
+		if (*res == c)
+		{
+			return (res);
+		}
 		res++;
 	}
 
-	if (*res == '\0')
+	if (*res == c)
 	{
-		return (NULL);
+		return (res);
 	}
-	return (res);
+	return (NULL);
 }
