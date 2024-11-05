@@ -13,17 +13,16 @@
 char *_strstr(char *haystack, char *needle)
 {
 	char *tmp;
-	char *res = haystack;
 	char *n;
 
 	if (*needle == '\0')
-		return (res);
+		return (haystack);
 
-	while (*res != '\0')
+	while (*haystack != '\0')
 	{
-		if (*res == *needle)
+		if (*haystack == *needle)
 		{
-			tmp = res;
+			tmp = haystack;
 			n = needle;
 
 			while (*n == *tmp && *n != '\0')
@@ -33,10 +32,12 @@ char *_strstr(char *haystack, char *needle)
 			}
 			if (*n == '\0')
                         {
-                                return (res);
+                                return (haystack);
                         }
+			printf("coucou\n");
 		}
-		res++;
+		printf("%c\n", *haystack);
+		haystack++;
 	}
 	return (NULL);
 }
