@@ -31,10 +31,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		res++;
 	}
-
-	if (*res == accept[i])
-	{
-		return (res);
-	}
 	return (NULL);
 }
