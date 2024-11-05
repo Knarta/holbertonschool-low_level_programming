@@ -14,7 +14,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	char *tmp;
 	char *res = haystack;
-	int i = 0;
+	char *n;
 
 	if (*needle == '\0')
 		return (res);
@@ -24,14 +24,14 @@ char *_strstr(char *haystack, char *needle)
 		if (*res == *needle)
 		{
 			tmp = res;
+			n = needle;
 
-			i = 0;
-
-			while (needle[i] == tmp[i] && needle[i] != '\0')
+			while (*n == *tmp && *n != '\0')
 			{
-				i++;
+				n++;
+				tmp++;
 			}
-			if (needle[i] == '\0')
+			if (*n == '\0')
                         {
                                 return (res);
                         }
