@@ -16,6 +16,9 @@ char *_strpbrk(char *s, char *accept)
 	char *res = s;
 	int i = 0;
 
+	if (s == NULL || accept == NULL)
+		return (NULL);
+
 	while (*res != '\0')
 	{
 		for (i = 0; accept[i] != '\0'; i++)
