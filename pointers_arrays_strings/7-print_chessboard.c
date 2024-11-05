@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * *_strcat - concatenates two strings
+ * print_chessboard -  prints the chessboard
  *
- * @dest: pointer
+ * @a: pointer
  *
- * @src: pointer
- *
- * Return: rest
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
