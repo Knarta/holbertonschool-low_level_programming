@@ -32,9 +32,9 @@ char *_strpbrk(char *s, char *accept)
 		res++;
 	}
 
-	if (*res == '\0')
+	if (*res == accept[i])
 	{
-		return (NULL);
+		return (res);
 	}
-	return (res);
+	return (NULL);
 }
