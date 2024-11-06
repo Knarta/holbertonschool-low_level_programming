@@ -3,6 +3,10 @@
 /**
  * main - Program entry point
  *
+ * @argc: total argument number
+ *
+ * @argv: argument list
+ *
  * Return: 0
  */
 
