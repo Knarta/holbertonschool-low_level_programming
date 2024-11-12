@@ -27,14 +27,14 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j] != '\0')
 		j++;
 
-	taille = i + j;
+	taille = i + j + 1;
 
 	s = malloc(taille * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 
-	while (i < taille - j)
+	while (i < taille - j - 1)
 	{
 		s[i] = s1[i];
 		i++;
