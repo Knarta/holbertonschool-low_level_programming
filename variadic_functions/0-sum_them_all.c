@@ -2,7 +2,7 @@
 
 /**
  * sum_them_all - eturns the sum of all its parameters
- * n: variable unsigned int
+ * @n: variable unsigned int
  *
  * Return: return sum of the all its parameters
  */
