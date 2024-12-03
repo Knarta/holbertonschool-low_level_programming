@@ -1,1 +1,1 @@
-README in progress
+Exercice in C about singly linked list
