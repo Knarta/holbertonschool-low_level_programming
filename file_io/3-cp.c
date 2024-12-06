@@ -10,7 +10,7 @@
 void error_exit(const char *err, int code, int fd, const char *filename)
 {
 	if (filename == NULL)
-		dprintf(STDERR_FILENO, "%s %i\n", err, fd);
+		dprintf(STDERR_FILENO, "%s %d\n", err, fd);
 	else
 		dprintf(STDERR_FILENO, "%s %s\n", err, filename);
 	exit(code);
