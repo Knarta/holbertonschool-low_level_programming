@@ -26,7 +26,7 @@ void _copy(const char *filefrom, const char *fileto)
 {
 	int fdto, fdfrom = open(filefrom, O_RDONLY);
 	ssize_t nfrom, nto;
-	char *buf;
+	char *buf = malloc(sizeof(char) * 1024);
 
 	if (fdfrom == -1)
 		error_exit("Error: Can't read from file", 98, 98, filefrom);
@@ -36,8 +36,6 @@ void _copy(const char *filefrom, const char *fileto)
 		close(fdfrom);
 		error_exit("Error: Can't write to", 99, 99, fileto);
 	}
-	buf = malloc(sizeof(char) * 1024);
-	nfrom = read(fdfrom, buf, 1024);
 	while ((nfrom = read(fdfrom, buf, 1024)) > 0)
 	{
 		nto = write(fdto, buf, nfrom);
