@@ -9,6 +9,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fileDescriptor;
+	ssize_t n;
 
 	if (filename == NULL)
 		return (-1);
@@ -21,7 +22,12 @@ int create_file(const char *filename, char *text_content)
 	{
 		while (*text_content != '\0')
 		{
-			write(fileDescriptor, text_content, 1);
+			n = write(fileDescriptor, text_content, 1);
+			if (n != 1)
+			{
+				close(fileDescriptor);
+				return (-1);
+			}
 			text_content++;
 		}
 	}
